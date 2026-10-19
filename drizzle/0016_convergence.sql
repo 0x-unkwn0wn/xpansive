@@ -1,0 +1,2 @@
+-- Schema snapshot synchronization for the hand-authored 0014 and 0015 migrations.
+-- No SQL changes are required here; the current schema is represented by 0016_snapshot.json.

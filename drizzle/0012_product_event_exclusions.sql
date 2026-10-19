@@ -1,0 +1,1 @@
+ALTER TABLE "product_events" ADD COLUMN "excluded" boolean DEFAULT false NOT NULL;

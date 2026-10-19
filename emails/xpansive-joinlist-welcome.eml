@@ -1,0 +1,83 @@
+From: Xpansive <hola@tu-dominio.com>
+To: {{email}}
+Reply-To: hola@tu-dominio.com
+Subject: Gracias por tu interés en Xpansive
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="xpansive-boundary"
+
+--xpansive-boundary
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Hola,
+
+Gracias por tu interés en Xpansive.
+
+Xpansive es un espacio para explorar ideas, descubrir nuevas direcciones y ver hasta dónde puede llevarte una pregunta. Nos alegra que quieras acompañarnos mientras el proyecto crece.
+
+Te escribiremos solo cuando haya novedades importantes, nuevas formas de explorar o algo que merezca la pena compartir.
+
+Mientras tanto, puedes conocer el proyecto en:
+{{site_url}}
+
+Gracias por estar al otro lado.
+
+El equipo de Xpansive
+
+---
+Has recibido este mensaje porque te suscribiste a la lista de novedades de Xpansive.
+Si prefieres no recibir más correos, puedes darte de baja aquí: {{unsubscribe_url}}
+
+--xpansive-boundary
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por tu interés en Xpansive</title>
+  </head>
+  <body style="margin:0;padding:0;background:#e9e7e0;color:#f1f0e8;font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#e9e7e0;">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:640px;background:#101311;">
+            <tr>
+              <td style="height:4px;background:#ff5c00;font-size:0;line-height:0;">&nbsp;</td>
+            </tr>
+            <tr>
+              <td style="padding:26px 34px 24px;border-bottom:1px solid #343a33;">
+                <p style="margin:0;color:#f1f0e8;font-size:14px;font-weight:800;letter-spacing:4px;">XPANSIVE<span style="color:#ff5c00;"> ↗</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:58px 34px 62px;">
+                <p style="margin:0 0 18px;color:#ff5c00;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;">Gracias por estar aquí</p>
+                <h1 style="margin:0 0 28px;color:#f1f0e8;font-size:46px;font-weight:500;line-height:1.02;letter-spacing:-2.5px;">Una idea.<br>Tres caminos.<br>Seguimos explorando.</h1>
+                <p style="max-width:490px;margin:0 0 20px;color:#c0c4bb;font-size:17px;line-height:1.6;">Gracias por tu interés en Xpansive. Nos alegra que quieras acompañarnos mientras el proyecto crece.</p>
+                <p style="max-width:490px;margin:0 0 34px;color:#a4aaa0;font-size:15px;line-height:1.65;">Te escribiremos solo cuando haya novedades importantes, nuevas formas de explorar o algo que merezca la pena compartir.</p>
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style="background:#ff5c00;">
+                      <a href="{{site_url}}" style="display:inline-block;padding:15px 21px;color:#101311;font-size:12px;font-weight:700;letter-spacing:.3px;text-decoration:none;">Conocer Xpansive&nbsp; →</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px 34px 28px;border-top:1px solid #343a33;color:#687168;font-size:11px;line-height:1.65;">
+                <p style="margin:0 0 8px;">Has recibido este mensaje porque te suscribiste a la lista de novedades de Xpansive.</p>
+                <p style="margin:0;">Si prefieres no recibir más correos, puedes <a href="{{unsubscribe_url}}" style="color:#a4aaa0;text-decoration:underline;">darte de baja aquí</a>.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+--xpansive-boundary--

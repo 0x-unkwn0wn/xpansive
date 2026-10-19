@@ -1,0 +1,1 @@
+ALTER TABLE "exploration_nodes" ADD COLUMN "branch_status" varchar(16) DEFAULT 'active' NOT NULL;

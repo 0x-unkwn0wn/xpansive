@@ -1,0 +1,1 @@
+-- Snapshot alignment migration. The data-preserving beta-auth migration is 0005_private_beta_auth.sql.

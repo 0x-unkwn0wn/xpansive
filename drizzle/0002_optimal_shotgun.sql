@@ -1,0 +1,1 @@
+ALTER TABLE "explorations" ADD COLUMN "steer" varchar(100);

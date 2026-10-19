@@ -1,0 +1,15 @@
+"use client";
+
+import { useState } from "react";
+import type { UiLanguage } from "@/lib/i18n";
+
+export function FeedbackForm({ uiLanguage }: { uiLanguage: UiLanguage }) {
+  const en = uiLanguage === "en";
+  const [open, setOpen] = useState(false); const [message, setMessage] = useState(""); const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault(); if (!message.trim() || status === "sending") return; setStatus("sending");
+    try { const response = await fetch("/api/feedback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message }) }); if (!response.ok) throw new Error("feedback_failed"); setMessage(""); setStatus("sent"); }
+    catch { setStatus("error"); }
+  }
+  return <div className="relative"><button type="button" className="header-action feedback-action" onClick={() => { setOpen((value) => !value); setStatus("idle"); }}>{en ? "FEEDBACK" : "FEEDBACK"}</button>{open && <div className="absolute right-0 top-8 z-30 w-[min(22rem,calc(100vw-3rem))] border border-[var(--line)] bg-[#0a0a0a] p-5 text-left shadow-2xl" role="dialog" aria-label={en ? "Send feedback" : "Enviar feedback"}><div className="mb-4 flex items-start justify-between gap-4"><div><p className="text-[10px] font-bold tracking-[0.16em] text-[var(--muted)]">{en ? "BETA FEEDBACK" : "FEEDBACK DE BETA"}</p><p className="mt-2 text-xs leading-5 text-[var(--muted)]">{en ? "Tell us what helped or got in the way. Only what you write here is sent." : "Cuéntanos qué ayudó o qué se interpuso. Solo enviaremos lo que escribas aquí."}</p></div><button type="button" onClick={() => setOpen(false)} aria-label={en ? "Close feedback" : "Cerrar feedback"} className="text-xl leading-none text-[var(--muted)]">×</button></div><form onSubmit={submit}><label htmlFor="feedback-message" className="text-[10px] font-bold tracking-[0.14em] text-[var(--muted)]">{en ? "YOUR MESSAGE" : "TU MENSAJE"}</label><textarea id="feedback-message" required maxLength={2000} rows={5} value={message} onChange={(event) => { setMessage(event.target.value); setStatus("idle"); }} className="mt-2 block w-full resize-y border border-[var(--line)] bg-transparent p-3 text-sm text-[var(--ink)] outline-none focus:border-[var(--ink)]" placeholder={en ? "What should we learn?" : "¿Qué deberíamos aprender?"} disabled={status === "sending"} /><div className="mt-3 flex items-center justify-between gap-3"><p className="text-xs text-[var(--muted)]" role="status" aria-live="polite">{status === "sent" ? (en ? "Thanks — received." : "Gracias — recibido.") : status === "error" ? (en ? "Could not send. Try again." : "No se ha podido enviar. Inténtalo de nuevo.") : `${message.length}/2000`}</p><button type="submit" disabled={!message.trim() || status === "sending"} className="rounded-full bg-[var(--ink)] px-4 py-2 text-[10px] font-bold tracking-[0.12em] text-black disabled:opacity-35">{status === "sending" ? (en ? "SENDING…" : "ENVIANDO…") : (en ? "SEND" : "ENVIAR")}</button></div></form></div>}</div>;
+}

@@ -1,0 +1,92 @@
+From: Xpansive <{{AUTH_EMAIL_FROM}}>
+To: destinatario.beta@example.invalid
+Subject: =?UTF-8?B?VHUgaW52aXRhY2nDs24gYSBsYSBiZXRhIHByaXZhZGEgZGUgWHBhbnNpdmU=?=
+Date: Sun, 11 Oct 2026 12:00:00 +0200
+Message-ID: <xpansive-private-beta-example@example.invalid>
+X-Example-Data: true
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=_xpansive_mv3n4hia_97sdtamx"
+
+--=_xpansive_mv3n4hia_97sdtamx
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Hola,
+
+Tu invitación a la beta privada de Xpansive está disponible.
+
+Xpansive te ayuda a explorar ideas con IA, descubrir nuevas direcciones y construir un árbol de posibilidades, paso a paso.
+
+Para empezar, accede a la beta y conecta tu propia API key de un proveedor compatible. Xpansive no la guarda.
+
+Acceder a la beta: https://example.invalid/auth/verify#token=TOKEN_DE_EJEMPLO_NO_VALIDO
+
+Si el botón no funciona, copia y pega este enlace en tu navegador:
+https://example.invalid/auth/verify#token=TOKEN_DE_EJEMPLO_NO_VALIDO
+
+Has recibido esta invitación porque solicitaste unirte a la lista de espera de Xpansive.
+
+Xpansive ↗
+--=_xpansive_mv3n4hia_97sdtamx
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu invitación a la beta privada de Xpansive</title>
+    <style>
+      @media screen and (max-width: 620px) {
+        .email-canvas { padding: 16px 10px !important; }
+        .email-shell__header, .email-shell__main, .email-shell__footer { padding-left: 22px !important; padding-right: 22px !important; }
+        .email-shell__main { padding-top: 38px !important; padding-bottom: 42px !important; }
+        .email-title { font-size: 32px !important; line-height: 1.08 !important; letter-spacing: -1.4px !important; }
+        .email-copy { font-size: 15px !important; }
+        .email-link { word-break: break-all !important; }
+      }
+    </style>
+  </head>
+  <body style="margin:0;padding:0;background:#e9e7e0;color:#f1f0e8;font-family:Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#e9e7e0;">
+      <tr>
+        <td class="email-canvas" align="center" style="padding:28px 16px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:600px;background:#101311;">
+            <tr>
+              <td style="height:4px;background:#ff5c00;font-size:0;line-height:0;">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="email-shell__header" style="padding:25px 34px 23px;border-bottom:1px solid #343a33;">
+                <p style="margin:0;color:#f1f0e8;font-size:14px;font-weight:800;letter-spacing:4px;line-height:1;">XPANSIVE<span style="color:#ff5c00;"> ↗</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="email-shell__main" style="padding:52px 34px 56px;">
+                <p style="margin:0 0 17px;color:#ff5c00;font-size:11px;font-weight:700;letter-spacing:2.3px;line-height:1.2;text-transform:uppercase;">Beta privada</p>
+                <h1 class="email-title" style="margin:0 0 24px;color:#f1f0e8;font-size:42px;font-weight:500;line-height:1.04;letter-spacing:-2px;">Tu invitación está disponible.</h1>
+                <p class="email-copy" style="max-width:490px;margin:0 0 17px;color:#f1f0e8;font-size:16px;line-height:1.55;">Xpansive te ayuda a explorar ideas con IA, descubrir nuevas direcciones y construir un árbol de posibilidades, paso a paso.</p>
+                <p class="email-copy" style="max-width:490px;margin:0 0 30px;color:#a4aaa0;font-size:14px;line-height:1.6;">Para empezar, accede a la beta y conecta tu propia API key de un proveedor compatible. Xpansive no la guarda.</p>
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style="background:#ff5c00;">
+                      <a href="https://example.invalid/auth/verify#token=TOKEN_DE_EJEMPLO_NO_VALIDO" style="display:inline-block;padding:15px 21px;color:#101311;font-size:12px;font-weight:700;line-height:1.2;letter-spacing:.3px;text-decoration:none;">Acceder a la beta&nbsp; →</a>
+                    </td>
+                  </tr>
+                </table>
+                <p style="max-width:490px;margin:28px 0 7px;color:#a4aaa0;font-size:12px;line-height:1.5;">Si el botón no funciona, copia y pega este enlace en tu navegador:</p>
+                <p style="max-width:490px;margin:0;font-size:12px;line-height:1.55;word-break:break-all;"><a class="email-link" href="https://example.invalid/auth/verify#token=TOKEN_DE_EJEMPLO_NO_VALIDO" style="color:#f1f0e8;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;">https://example.invalid/auth/verify#token=TOKEN_DE_EJEMPLO_NO_VALIDO</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="email-shell__footer" style="padding:19px 34px 25px;border-top:1px solid #343a33;color:#687168;font-size:11px;line-height:1.65;">
+                <p style="margin:0;">Has recibido esta invitación porque solicitaste unirte a la lista de espera de Xpansive.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+--=_xpansive_mv3n4hia_97sdtamx--

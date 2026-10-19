@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: xpansive-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: xpansive
+      POSTGRES_USER: xpansive
+      POSTGRES_PASSWORD: xpansive_local
+    ports:
+      - "5432:5432"
+    volumes:
+      - xpansive-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U xpansive -d xpansive"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  xpansive-postgres-data:
