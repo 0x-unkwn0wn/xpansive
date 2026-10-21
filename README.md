@@ -30,6 +30,7 @@ Xpansive uses the AI provider keys connected by the user. Multiple providers can
 
 - `DATABASE_URL`: PostgreSQL connection string, required for persistence, Share and Fork.
 - `AUTH_APP_URL`: public origin used when producing invitation URLs; falls back to the request origin.
+- `APP_HOST`: hostname that opens the authenticated app at `/`; defaults to `app.xpansive.org`.
 - `ADMIN_BOOTSTRAP_EMAIL`, `ADMIN_BOOTSTRAP_SECRET`, `ADMIN_BOOTSTRAP_CONFIRMATION`: local one-time first-admin bootstrap inputs; never expose them to the browser.
 - `EMAIL_PROVIDER`: set to `resend` to enable transactional delivery.
 - `RESEND_API_KEY`: server-only Resend API key; never expose it to the browser.
@@ -148,5 +149,7 @@ Xpansive is prepared for Railway rather than Vercel. Railway can detect the Node
 6. Add a separate Railway Cron service using this repository and the command `npm run ops:purge`. Run it daily in UTC. The command is intentionally plain Node.js, closes its database connection, and removes expired operational data according to the configured retention.
 7. After the first successful migration, run `npm run admin:bootstrap` once from a trusted shell with the bootstrap variables set. Accept the invitation, then run it again to assign the first administrator.
 8. Register `/api/webhooks/resend` in Resend, verify the sending domain, and test invitation and magic-link delivery end to end.
+
+For the two-domain setup, attach both `xpansive.org` and `app.xpansive.org` to the same Railway web service. Set `APP_HOST=app.xpansive.org` and `AUTH_APP_URL=https://app.xpansive.org`. The landing remains at `https://xpansive.org`; requests to `https://app.xpansive.org/` are internally rewritten to `/app`, so users do not need to type `/app`.
 
 Keep `DATABASE_URL` server-side; do not prefix it with `NEXT_PUBLIC_`. Railway's dashboard remains the source for service variables, domains, cron schedule, backups, and deployment approvals.

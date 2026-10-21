@@ -30,6 +30,10 @@
 4. Verify Resend SPF, DKIM, DMARC, sender identity, and webhook signing secret.
 5. Deploy with `npm run db:migrate` as the pre-deploy command.
 6. Configure the final custom domain, `/health` liveness check and `/ready` readiness check.
+   - Add `xpansive.org` and `app.xpansive.org` as custom domains on the same Railway web service.
+   - Set `APP_HOST=app.xpansive.org` and `AUTH_APP_URL=https://app.xpansive.org` in production.
+   - The root domain serves the landing; the app subdomain rewrites `/` internally to `/app` without changing the browser URL.
+   - Configure the DNS records Railway provides for both domains. The apex domain may require ALIAS/ANAME or CNAME flattening from the DNS provider.
 7. Run `railway run npm run ops:check-env`.
 8. Run `railway run npm run admin:bootstrap` once, accept the invitation, and run it again.
 9. Create the separate Cron service for `npm run ops:purge` with schedule `0 3 * * *` (03:00 UTC). It removes expired sessions/magic links and applies the configured product-event retention.
